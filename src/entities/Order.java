@@ -70,16 +70,16 @@ public class Order {
         StringBuilder sb = new StringBuilder();
         sb.append("Order Moment: ");
         sb.append(sdf.format(getMoment()) +"\n");
-        sb.append("Order status :");
+        sb.append("Order status: ");
         sb.append(getStatus() +"\n");
         sb.append("Client: ");
         sb.append(client + "\n");
-        sb.append("Order items \n");
+        sb.append("Order items: \n");
         for (OrderItem item : items){
-            sb.append(items + "\n");
+            sb.append(item + "\n");
         }
         sb.append("Total prince: $");
-        sb.append(total());
+        sb.append(String.format("%.2f", total()));;
         return sb.toString();
     }
 }
